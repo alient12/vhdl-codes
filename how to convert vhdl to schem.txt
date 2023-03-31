@@ -1,2 +1,0 @@
-cd "C:\Users\AliEntezari\Desktop\Athena Codes\VHDL-entity-converter\bin"
-.\VEC.exe "C:\Users\AliEntezari\Desktop\Athena Codes\vhdl codes\simple multiplier\4badder.vhdl" -s -p
