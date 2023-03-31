@@ -1,0 +1,3 @@
+vhdl work "logic.vhd"
+vhdl work "arithic.vhd"
+vhdl work "MUX.vhd"

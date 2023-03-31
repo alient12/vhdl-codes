@@ -1,0 +1,40 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/arithic.vhd" in Library work.
+Architecture behavioral of Entity arithic is up to date.
+Compiling vhdl file "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/logic.vhd" in Library work.
+Architecture behavioral of Entity logic is up to date.
+Compiling vhdl file "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/MUX.vhd" in Library work.
+Architecture behavioral of Entity mux is up to date.
+Compiling vhdl file "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/top.vhd" in Library work.
+Architecture behavioral of Entity top is up to date.
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> 
+
+Total memory usage is 4468200 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

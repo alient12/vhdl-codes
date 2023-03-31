@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/xst"
+elaborate
+-ifn top.prj
+-ifmt mixed

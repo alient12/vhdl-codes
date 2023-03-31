@@ -1,0 +1,8 @@
+[Inputs]
+Cin
+=A[7:0]=
+=B[7:0]=
+=S[3:0]=
+[Outputs]
+=Output[7:0]=
+[BiDir]

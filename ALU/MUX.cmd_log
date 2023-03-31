@@ -1,0 +1,11 @@
+vhdtdtfi -prj MUX -o "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/MUX.vhi" -module MUX -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work logic.vhd -lib work arithic.vhd -lib work MUX.vhd 
+vhdtdtfi -prj MUX -o "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/MUX.vhi" -module MUX -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work logic.vhd -lib work arithic.vhd -lib work MUX.vhd 
+vhdtdtfi -prj MUX -o "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/MUX.vhi" -module MUX -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work logic.vhd -lib work arithic.vhd -lib work MUX.vhd 
+vhdtdtfi -prj MUX -o "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/MUX.vhi" -module MUX -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work logic.vhd -lib work arithic.vhd -lib work MUX.vhd 
+vhdtdtfi -prj MUX -o "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/MUX.vhi" -module MUX -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work logic.vhd -lib work arithic.vhd -lib work MUX.vhd 
+vhdtdtfi -prj MUX -o "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/MUX.vhi" -module MUX -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work logic.vhd -lib work arithic.vhd -lib work MUX.vhd 
+vhdtdtfi -prj MUX -o "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/MUX.vhi" -module MUX -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work logic.vhd -lib work arithic.vhd -lib work MUX.vhd 
+vhdtdtfi -prj MUX -o "C:/Users/Mohammad masih/Desktop/MUX/MUX.vhi" -module MUX -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work MUX.vhd 
+vhdtdtfi -prj MUX -o "C:/Users/Mohammad masih/Desktop/MUX/MUX.vhi" -module MUX -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work MUX.vhd 
+vhdtdtfi -lib work MUX.vhd -prj MUX -o MUX.spl -module MUX -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3 MUX.spl {C:/Users/Mohammad masih/Desktop/MUX/MUX.sym} 

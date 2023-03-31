@@ -1,0 +1,11 @@
+xst -intstyle ise -ifn "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/top.xst" -ofn "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/top.syr" 
+xst -intstyle ise -ifn "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/top.xst" -ofn "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/top.syr" 
+xst -intstyle ise -ifn "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/top.xst" -ofn "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-pq208-4 "top.ngc" top.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+vhdtdtfi -lib work logic.vhd -lib work arithic.vhd -lib work MUX.vhd -lib work top.vhd -prj MUX -o top.spl -module top -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3 top.spl {C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/top.sym} 
+vhdtdtfi -prj MUX -o "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/top.vhi" -module top -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work logic.vhd -lib work arithic.vhd -lib work MUX.vhd -lib work top.vhd 
+bitgen -intstyle ise -f top.ut top.ncd 

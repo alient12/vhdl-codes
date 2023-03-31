@@ -1,0 +1,13 @@
+v 3
+file . ".\multiplier.vhdl" "20230317174144.000" "20230317211149.794":
+  entity multiplier at 1( 0) + 0 on 17;
+  architecture behavioral of multiplier at 13( 274) + 0 on 18;
+file . ".\multiplyingadder.vhdl" "20230317170034.000" "20230317203041.136":
+  entity multiplyingadder at 1( 0) + 0 on 15;
+  architecture behavioral of multiplyingadder at 15( 281) + 0 on 16;
+file . ".\fulladder.vhdl" "20230311205454.000" "20230317202623.148":
+  entity fulladder at 1( 0) + 0 on 11;
+  architecture behavioral of fulladder at 9( 161) + 0 on 12;
+file . ".\multiplier_tb.vhdl" "20230317174738.000" "20230317211742.352":
+  entity multiplier_tb at 1( 0) + 0 on 21;
+  architecture behavior of multiplier_tb at 11( 241) + 0 on 22;

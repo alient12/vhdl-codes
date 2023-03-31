@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/arithic</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/arithic.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Mohammad masih/Desktop/MUX/arithic.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/arithic/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/arithic.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Mohammad masih/Desktop/MUX/arithic.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/logic</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/logic.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Mohammad masih/Desktop/MUX/logic.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/logic/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/logic.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Mohammad masih/Desktop/MUX/logic.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/MUX</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/MUX.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Mohammad masih/Desktop/MUX/MUX.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/MUX/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/MUX.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Mohammad masih/Desktop/MUX/MUX.vhd</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="164" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Mohammad masih/Desktop/MUX/MUX.vhd</arg>&quot; Line <arg fmt="%d" index="2">20</arg>. <arg fmt="%s" index="3">parse error, unexpected OTHERS, expecting WHEN</arg>
+</msg>
+
+</messages>
+

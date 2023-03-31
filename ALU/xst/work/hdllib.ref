@@ -1,0 +1,8 @@
+AR mux behavioral "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/MUX.vhd" sub00/vhpl05 1634209610
+AR arithic behavioral "C:/Users/Mohammad masih/Desktop/MUX/arithic.vhd" sub00/vhpl01 1634974838
+EN logic NULL "C:/Users/Mohammad masih/Desktop/MUX/logic.vhd" sub00/vhpl02 1634974839
+AR logic behavioral "C:/Users/Mohammad masih/Desktop/MUX/logic.vhd" sub00/vhpl03 1634974840
+EN top NULL "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/top.vhd" sub00/vhpl06 1634209611
+EN arithic NULL "C:/Users/Mohammad masih/Desktop/MUX/arithic.vhd" sub00/vhpl00 1634974837
+EN mux NULL "C:/Users/Mohammad masih/Desktop/MUX/MUX.vhd" sub00/vhpl04 1634974972
+AR top behavioral "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/top.vhd" sub00/vhpl07 1634209612

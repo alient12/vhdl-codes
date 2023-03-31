@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\pc\OneDrive\Desktop\aaz manteqi\2\MUX\top.ncd
+OUTFILE=C:\Users\pc\OneDrive\Desktop\aaz manteqi\2\MUX\top.bit
+FAMILY=Spartan3
+PART=xc3s400-4pq208
+WORKINGDIR=C:\Users\pc\OneDrive\Desktop\aaz manteqi\2\MUX
+LICENSE=WebPack
+USER_INFO=__0_0_0

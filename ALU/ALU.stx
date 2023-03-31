@@ -1,0 +1,38 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/Mohammad masih/Desktop/MUX/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/Mohammad masih/Desktop/MUX/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Mohammad masih/Desktop/MUX/arithic.vhd" in Library work.
+Architecture behavioral of Entity arithic is up to date.
+Compiling vhdl file "C:/Users/Mohammad masih/Desktop/MUX/logic.vhd" in Library work.
+Architecture behavioral of Entity logic is up to date.
+Compiling vhdl file "C:/Users/Mohammad masih/Desktop/MUX/MUX.vhd" in Library work.
+ERROR:HDLParsers:164 - "C:/Users/Mohammad masih/Desktop/MUX/MUX.vhd" Line 20. parse error, unexpected OTHERS, expecting WHEN
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> 
+
+Total memory usage is 4469908 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

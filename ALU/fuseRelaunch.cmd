@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Mohammad masih/Desktop/MUX/ALU_isim_beh.exe" -prj "C:/Users/Mohammad masih/Desktop/MUX/ALU_beh.prj" "work.ALU" 

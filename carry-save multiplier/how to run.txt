@@ -1,0 +1,7 @@
+ghdl -a --ieee=synopsys .\fulladder.vhdl || ghdl -e --ieee=synopsys fulladder
+ghdl -a --ieee=synopsys .\multiplyingadder.vhdl || ghdl -e --ieee=synopsys multiplyingadder
+ghdl -a --ieee=synopsys .\multiplier.vhdl || ghdl -e --ieee=synopsys multiplier
+ghdl -a --ieee=synopsys .\multiplier_tb.vhdl || ghdl -e --ieee=synopsys multiplier_tb
+ghdl -r --ieee=synopsys  multiplier_tb --wave=wave.ghw
+
+gtkwave.exe .\wave.ghw

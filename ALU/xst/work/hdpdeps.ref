@@ -1,0 +1,32 @@
+V3 21
+FL "C:/Users/Mohammad masih/Desktop/MUX/ALU.vhd" 2021/10/23.11:10:12 P.20131013
+EN work/ALU 0 FL "C:/Users/Mohammad masih/Desktop/MUX/ALU.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/ALU/Behavioral 0 \
+      FL "C:/Users/Mohammad masih/Desktop/MUX/ALU.vhd" EN work/ALU 0 CP arithic \
+      CP logic CP MUX
+FL "C:/Users/Mohammad masih/Desktop/MUX/arithic.vhd" 2021/10/14.13:40:46 P.20131013
+EN work/arithic 1634974837 FL "C:/Users/Mohammad masih/Desktop/MUX/arithic.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/arithic/Behavioral 1634974838 \
+      FL "C:/Users/Mohammad masih/Desktop/MUX/arithic.vhd" EN work/arithic 1634974837
+FL "C:/Users/Mohammad masih/Desktop/MUX/logic.vhd" 2021/10/14.13:41:52 P.20131013
+EN work/logic 1634974839 FL "C:/Users/Mohammad masih/Desktop/MUX/logic.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/logic/Behavioral 1634974840 \
+      FL "C:/Users/Mohammad masih/Desktop/MUX/logic.vhd" EN work/logic 1634974839
+FL "C:/Users/Mohammad masih/Desktop/MUX/MUX.vhd" 2021/10/23.11:10:11 P.20131013
+EN work/MUX 1634209609 FL "C:/Users/Mohammad masih/Desktop/MUX/MUX.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/MUX/Behavioral 1634209610 \
+      FL "C:/Users/Mohammad masih/Desktop/MUX/MUX.vhd" EN work/MUX 1634209609
+FL "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/arithic.vhd" 2021/10/14.13:40:46 P.20131013
+FL "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/logic.vhd" 2021/10/14.13:41:52 P.20131013
+FL "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/MUX.vhd" 2021/10/14.14:33:43 P.20131013
+FL "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/top.vhd" 2021/10/14.14:33:43 P.20131013
+EN work/top 1634209611 \
+      FL "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/top.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/top/Behavioral 1634209612 \
+      FL "C:/Users/pc/OneDrive/Desktop/aaz manteqi/2/MUX/top.vhd" EN work/top 1634209611 \
+      CP MUX
