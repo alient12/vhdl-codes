@@ -5,28 +5,32 @@ USE ieee.std_logic_1164.ALL;
 -- arithmetic functions with Signed or Unsigned values
 --USE ieee.numeric_std.ALL;
  
-ENTITY multiplier_tb IS
-END multiplier_tb;
+ENTITY fulladder_tb IS
+END fulladder_tb;
  
-ARCHITECTURE behavior OF multiplier_tb IS 
+ARCHITECTURE behavior OF fulladder_tb IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT multiplier
-    PORT(
-         A : IN  std_logic_vector(5 downto 0);
-         B : IN  std_logic_vector(5 downto 0);
-         P : OUT  std_logic_vector(11 downto 0)
+    component fulladder is
+        port (
+            A: in std_logic;
+            B: in std_logic;
+            Cin: in std_logic;
+            S: out std_logic;
+            Cout: out std_logic
         );
-    END COMPONENT;
+    end component;
     
 
    --Inputs
-   signal A : std_logic_vector(5 downto 0) := (others => '0');
-   signal B : std_logic_vector(5 downto 0) := (others => '0');
+   signal A : std_logic;
+   signal B : std_logic;
+   signal Cin : std_logic;
 
  	--Outputs
-   signal P : std_logic_vector(11 downto 0);
+   signal S : std_logic;
+   signal Cout : std_logic;
    -- No clocks detected in port list. Replace <clock> below with 
    -- appropriate port name 
  
@@ -35,10 +39,12 @@ ARCHITECTURE behavior OF multiplier_tb IS
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: multiplier PORT MAP (
+   uut: fulladder PORT MAP (
           A => A,
           B => B,
-          P => P
+          Cin => Cin,
+          S => S,
+          Cout => Cout
         );
 
    
@@ -46,14 +52,14 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin		
-      -- hold reset state for 100 ns.
-        wait for 50 ns;	
-		A<="001000";
-		B<="000111";
-		wait for 50 ns;	
-		A<="001100";
-		B<="000010";
-        wait for 50 ns;
+      A<='1';
+      B<='1';
+      Cin<='1';
+		  wait for 50 ns;	
+      A<='1';
+      B<='0';
+      Cin<='1';
+      wait for 50 ns;
 		
 
      

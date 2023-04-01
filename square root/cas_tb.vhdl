@@ -5,28 +5,32 @@ USE ieee.std_logic_1164.ALL;
 -- arithmetic functions with Signed or Unsigned values
 --USE ieee.numeric_std.ALL;
  
-ENTITY multiplier_tb IS
-END multiplier_tb;
+ENTITY cas_tb IS
+END cas_tb;
  
-ARCHITECTURE behavior OF multiplier_tb IS 
+ARCHITECTURE behavior OF cas_tb IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT multiplier
-    PORT(
-         A : IN  std_logic_vector(5 downto 0);
-         B : IN  std_logic_vector(5 downto 0);
-         P : OUT  std_logic_vector(11 downto 0)
-        );
+    COMPONENT cas
+    port (
+        X: in std_logic;
+        Cin: in std_logic;
+        PI: in std_logic;
+        DI: in std_logic;
+        PO: out std_logic;
+        DO: out std_logic;
+        R: out std_logic;
+        Cout: out std_logic
+    );
     END COMPONENT;
     
 
    --Inputs
-   signal A : std_logic_vector(5 downto 0) := (others => '0');
-   signal B : std_logic_vector(5 downto 0) := (others => '0');
+   signal X, Cin, PI, DI : std_logic;
 
  	--Outputs
-   signal P : std_logic_vector(11 downto 0);
+   signal PO, DO, R, Cout : std_logic;
    -- No clocks detected in port list. Replace <clock> below with 
    -- appropriate port name 
  
@@ -35,10 +39,8 @@ ARCHITECTURE behavior OF multiplier_tb IS
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: multiplier PORT MAP (
-          A => A,
-          B => B,
-          P => P
+   uut: cas PORT MAP (
+          X=>X, Cin=>Cin, PI=>PI, DI=>DI, PO=>PO, DO=>DO, R=>R, Cout=>Cout
         );
 
    
@@ -46,14 +48,16 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin		
-      -- hold reset state for 100 ns.
-        wait for 50 ns;	
-		A<="001000";
-		B<="000111";
-		wait for 50 ns;	
-		A<="001100";
-		B<="000010";
-        wait for 50 ns;
+      X<='1';
+      Cin<='1';
+      PI<='1';
+      DI<='1';
+      wait for 50 ns;	
+      X<='1';
+      Cin<='0';
+      PI<='0';
+      DI<='1';
+      wait for 50 ns;
 		
 
      

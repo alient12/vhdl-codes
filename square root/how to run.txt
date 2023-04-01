@@ -2,6 +2,7 @@ ghdl -a --ieee=synopsys .\fulladder.vhdl || ghdl -e --ieee=synopsys fulladder
 ghdl -a --ieee=synopsys .\cas.vhdl || ghdl -e --ieee=synopsys cas
 ghdl -a --ieee=synopsys .\xblock.vhdl || ghdl -e --ieee=synopsys xblock
 ghdl -a --ieee=synopsys .\yblock.vhdl || ghdl -e --ieee=synopsys yblock
+ghdl -a --ieee=synopsys .\sqrt.vhdl || ghdl -e --ieee=synopsys sqrt
 
 ghdl -a --ieee=synopsys .\fulladder_tb.vhdl || ghdl -e --ieee=synopsys fulladder_tb
 ghdl -r --ieee=synopsys  fulladder_tb --wave=fulladder_wave.ghw
@@ -14,5 +15,8 @@ ghdl -r --ieee=synopsys  xblock_tb --wave=xblock_wave.ghw
 
 ghdl -a --ieee=synopsys .\yblock_tb.vhdl || ghdl -e --ieee=synopsys yblock_tb
 ghdl -r --ieee=synopsys  yblock_tb --wave=yblock_wave.ghw
+
+ghdl -a --ieee=synopsys .\sqrt_tb.vhdl || ghdl -e --ieee=synopsys sqrt_tb
+ghdl -r --ieee=synopsys  sqrt_tb --wave=sqrt_wave.ghw
 
 gtkwave.exe .\wave.ghw
