@@ -1,0 +1,4 @@
+v 3
+file . ".\ram.vhdl" "20230424201924.000" "20230425004924.642":
+  entity daul_port_ram at 1( 0) + 0 on 19;
+  architecture daul_port_ram_arch of daul_port_ram at 19( 541) + 0 on 20;

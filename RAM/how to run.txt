@@ -1,0 +1,5 @@
+ghdl -a --ieee=synopsys .\ram.vhdl || ghdl -e --ieee=synopsys daul_port_ram
+
+data_width = 16
+addr_width = 10 => 2^10 = 1024
+=> 1024x16 RAM
