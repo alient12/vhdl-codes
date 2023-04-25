@@ -1,0 +1,16 @@
+v 3
+file . ".\RAM.vhdl" "20230425223418.000" "20230426030454.438":
+  entity ram at 1( 0) + 0 on 21;
+  architecture ram_arch of ram at 19( 521) + 0 on 22;
+file . ".\logic.vhdl" "20230425195926.000" "20230426030103.745":
+  entity logic at 1( 0) + 0 on 13;
+  architecture behavioral of logic at 12( 224) + 0 on 14;
+file . ".\arithic.vhdl" "20230425223248.000" "20230426030250.033":
+  entity arithic at 1( 0) + 0 on 17;
+  architecture behavioral of arithic at 15( 317) + 0 on 18;
+file . ".\MUX.vhdl" "20211023074410.000" "20230426030130.326":
+  entity mux at 1( 0) + 0 on 15;
+  architecture behavioral of mux at 13( 237) + 0 on 16;
+file . ".\ALU.vhdl" "20230425223322.000" "20230426030346.909":
+  entity alu at 1( 0) + 0 on 19;
+  architecture behavioral of alu at 14( 280) + 0 on 20;
