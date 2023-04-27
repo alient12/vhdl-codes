@@ -1,5 +1,7 @@
 ghdl -a --ieee=synopsys .\RAM.vhdl || ghdl -e --ieee=synopsys RAM
+ghdl -a --ieee=synopsys .\ROM.vhdl || ghdl -e --ieee=synopsys ROM
 ghdl -a --ieee=synopsys .\arithic.vhdl || ghdl -e --ieee=synopsys arithic
 ghdl -a --ieee=synopsys .\logic.vhdl || ghdl -e --ieee=synopsys logic
 ghdl -a --ieee=synopsys .\MUX.vhdl || ghdl -e --ieee=synopsys MUX
 ghdl -a --ieee=synopsys .\ALU.vhdl || ghdl -e --ieee=synopsys ALU
+ghdl -a --ieee=synopsys .\Control_Unit.vhdl || ghdl -e --ieee=synopsys Control_Unit

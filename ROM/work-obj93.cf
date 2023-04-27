@@ -1,4 +1,7 @@
 v 3
+file . ".\Control_Unit.vhdl" "20230427081336.000" "20230427124338.262":
+  entity control_unit at 1( 0) + 0 on 29;
+  architecture behavioral of control_unit at 13( 260) + 0 on 30;
 file . ".\RAM.vhdl" "20230425223418.000" "20230426030454.438":
   entity ram at 1( 0) + 0 on 21;
   architecture ram_arch of ram at 19( 521) + 0 on 22;
@@ -14,3 +17,6 @@ file . ".\MUX.vhdl" "20211023074410.000" "20230426030130.326":
 file . ".\ALU.vhdl" "20230425223322.000" "20230427111719.320":
   entity alu at 1( 0) + 0 on 25;
   architecture behavioral of alu at 14( 280) + 0 on 26;
+file . ".\ROM.vhdl" "20230427080702.000" "20230427123733.483":
+  entity rom at 1( 0) + 0 on 27;
+  architecture rom_arch of rom at 15( 349) + 0 on 28;
