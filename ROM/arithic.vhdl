@@ -40,13 +40,13 @@ begin
 		when "011"=>
 			arthc <= x + '1';
 		when "100"=>
-			arthc <= std_logic_vector(shift_left  (unsigned(x), 1));
+			arthc <= std_logic_vector(shift_left  (unsigned(x), conv_integer(y)));
 		when "101"=>
-			arthc <= std_logic_vector(shift_right (unsigned(x), 1));
+			arthc <= std_logic_vector(shift_right (unsigned(x), conv_integer(y)));
 		when "110"=>
-			arthc <= std_logic_vector(rotate_left (unsigned(x), 1));
+			arthc <= std_logic_vector(rotate_left (unsigned(x), conv_integer(y)));
 		when others=>
-			arthc <= std_logic_vector(rotate_right(unsigned(x), 1));
+			arthc <= std_logic_vector(rotate_right(unsigned(x), conv_integer(y)));
 	END CASE;
 	end process;
 
