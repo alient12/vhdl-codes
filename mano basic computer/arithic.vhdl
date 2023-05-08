@@ -4,17 +4,17 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 USE ieee.numeric_std.all;
 
 entity arithic is
-	Port ( x,y: in STD_LOGIC_VECTOR (7 downto 0);
+	Port ( x,y: in STD_LOGIC_VECTOR (15 downto 0);
 			S1 : in STD_LOGIC_VECTOR (2 downto 0);
 			cout: out STD_LOGIC;
-			arthc : inout STD_LOGIC_VECTOR (7 downto 0)
+			arthc : inout STD_LOGIC_VECTOR (15 downto 0)
 			);
 	
 end arithic;
 
 architecture Behavioral of arithic is
 
-signal temp: STD_LOGIC_VECTOR (8 downto 0);
+signal temp: STD_LOGIC_VECTOR (16 downto 0);
 
 begin
 	-- with S1 select
@@ -33,8 +33,8 @@ begin
 			arthc <= x * y;
 		when "001"=>
 			temp <= '0' & x + y;
-			arthc<= temp(7 downto 0);
-			cout <= temp(8);
+			arthc<= temp(15 downto 0);
+			cout <= temp(16);
 		when "010"=>
 			arthc <= x - y;
 		when "011"=>

@@ -13,10 +13,10 @@ end Control_Unit;
 architecture Behavioral of Control_Unit is
 
     COMPONENT ALU
-	PORT( A,B: in STD_LOGIC_VECTOR (7 downto 0);
+	PORT( A,B: in STD_LOGIC_VECTOR (15 downto 0);
 			S : in STD_LOGIC_VECTOR (3 downto 0);
 			Cout : out STD_LOGIC;
-			Output : out STD_LOGIC_VECTOR (7 downto 0)
+			Output : out STD_LOGIC_VECTOR (15 downto 0)
 		);
 	END COMPONENT;
 
@@ -90,56 +90,59 @@ begin
             when state_t2 =>
                 if rising_edge(clk) then
                     decoder <= IR(15 downto 10);
-                    AR <= IR(9 downto 0);
+                    AR(9 downto 0) <= IR(9 downto 0);
                 end if;
                 state <= state_t3;
             when state_t3 =>
                 if rising_edge(clk) then
-                    if      decoder = "000001" then
-                        alu_op <= "1010";    
-                    elsif decoder = "000010" then
+                    case decoder is
+                    when "000001" =>
+                        alu_op <= "1010"; 
+                    when "000010" =>
                         data_ram <= AC;
                         we_ram <= '1';
-                    elsif decoder = "000011" then
+                    when "000011" =>
                         AC <= data_ram;
                         we_ram <= '0';
-                    elsif decoder = "000100" then
+                    when "000100" =>
                         alu_op <= "0001";
-                    elsif decoder = "000101" then
+                    when "000101" =>
                         alu_op <= "0011";
-                    elsif decoder = "000110" then
+                    when "000110" =>
                         AC <= "0000000000000000";
-                    elsif decoder = "000111" then
+                    when "000111" =>
                         E <= '0';
-                    elsif decoder = "001000" then
+                    when "001000" =>
                         alu_op <= "0110";
-                    elsif decoder = "001001" then
+                    when "001001" =>
                         alu_op <= "0111";
-                    elsif decoder = "001010" then
+                    when "001010" =>
                         if AC(15) = '0' then
                             PC <= PC + 1;
                         end if;
-                    elsif decoder = "001011" then
+                    when "001011" =>
                         if AC(15) = '1' then
                             PC <= PC + 1;
                         end if;
-                    elsif decoder = "001100" then
+                    when "001100" =>
                         if E = '0' then
                             PC <= PC + 1;
                         end if;
-                    elsif decoder = "001101" then
+                    when "001101" =>
                         if AC = "0000000000000000" then
                             PC <= PC + 1;
                         end if;
-                    elsif decoder = "001110" then
+                    when "001110" =>
                         alu_op <= "0100";
-                    elsif decoder = "001111" then
+                    when "001111" =>
                         alu_op <= "0101";
-                    elsif decoder = "010000" then
+                    --when "010000" =>
                         -- fuck you ...
-                    elsif decoder = "100000" then
+                    --when "100000" =>
                         -- fuck you ...
-                    end if;
+                    when others =>
+                        null;
+                    end case;
                 end if;
                 state <= state_t0;
         END CASE;

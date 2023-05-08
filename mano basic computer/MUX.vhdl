@@ -4,9 +4,9 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 
 entity MUX is
-	Port ( A,B: inout STD_LOGIC_VECTOR (7 downto 0);
+	Port ( A,B: inout STD_LOGIC_VECTOR (15 downto 0);
 			S : in STD_LOGIC;
-			Output : out STD_LOGIC_VECTOR (7 downto 0)
+			Output : out STD_LOGIC_VECTOR (15 downto 0)
 			);
 end MUX;
 

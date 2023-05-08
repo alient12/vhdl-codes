@@ -3,9 +3,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 
 entity logic is
-	Port ( x,y: in STD_LOGIC_VECTOR (7 downto 0);
+	Port ( x,y: in STD_LOGIC_VECTOR (15 downto 0);
 			S1 : in STD_LOGIC_VECTOR (2 downto 0);
-			lgc : inout STD_LOGIC_VECTOR (7 downto 0)
+			lgc : inout STD_LOGIC_VECTOR (15 downto 0)
 			);
 end logic;
 
