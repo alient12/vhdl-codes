@@ -6,10 +6,8 @@ use IEEE.std_logic_unsigned.all;
 entity Control_Unit is
 generic (data_width : natural := 16;
     addr_width : natural := 10);
-    Port ( clk : in std_logic;
-           rst : in std_logic
+port ( clk : in std_logic
 );
-
 end Control_Unit;
 
 architecture Behavioral of Control_Unit is
@@ -54,9 +52,8 @@ architecture Behavioral of Control_Unit is
 
     signal alu_op: std_logic_vector(3 downto 0);
 
-    TYPE State_type IS (fetch, decode, read_mem, execute);
-    signal current_state: State_Type := fetch;
-    signal next_state: State_Type;
+    TYPE State_type IS (state_t0, state_t1, state_t2, state_t3);
+    signal state: State_Type;
 
     signal decoder: STD_LOGIC_VECTOR(5 downto 0);
 begin
@@ -71,43 +68,34 @@ begin
         we => we_ram,
         addr_in => addr_ram,
         addr_out => addr_ram,
-        data_in => data_ram,
+        data_in => addr_ram,
         data_out => data_ram
     );
 
-    clockprocess : process(clk)
-    begin 
-        if rising_edge(clk) then
-            if rst = '1' then
-                current_state <= fetch;
-            else
-                current_state <= next_state;
-            end if;
-        end if;
-    end process;
-
-    state_logic: process (current_state, clk)
+    PROCESS(clk)
     begin
-        CASE current_state IS
-            when fetch =>
-                decoder <= IR(15 downto 10);
-                AR(9 downto 0) <= IR(9 downto 0);
-                next_state <= decode;
-            when decode =>
-                case decoder is
-                    when "000001" | "000010" | "000011" | "000100"|"010000"|"100000"  => 
-                        next_state <= read_mem;
-                    when "000101"|"000110"|"000111"|"001000"|"001001"|"001010"|"001011"|"001100"|"001101"|"001110"|"001111" => 
-                        next_state <= execute;                        
-                    when others =>
-                        next_state <= fetch;
-                end case;
-            when read_mem =>
-                addr_ram <= AR;
-                DR <= data_ram;
-                next_state <= execute;
-            when execute =>
-                case decoder is
+        CASE state IS
+            when state_t0 =>
+                if rising_edge(clk) then
+                    AR <= PC;
+                end if;
+                state <= state_t1;
+            when state_t1 =>
+                if rising_edge(clk) then
+                    PC <= PC + 1;
+                    addr_rom <= AR;
+                    IR <= data_rom;
+                end if;
+                state <= state_t2;
+            when state_t2 =>
+                if rising_edge(clk) then
+                    decoder <= IR(15 downto 10);
+                    AR(9 downto 0) <= IR(9 downto 0);
+                end if;
+                state <= state_t3;
+            when state_t3 =>
+                if rising_edge(clk) then
+                    case decoder is
                     when "000001" =>
                         alu_op <= "1010"; 
                     when "000010" =>
@@ -154,8 +142,9 @@ begin
                         -- fuck you ...
                     when others =>
                         null;
-                end case;
-            next_state <= fetch;
+                    end case;
+                end if;
+                state <= state_t0;
         END CASE;
     END PROCESS;
 
