@@ -17,6 +17,7 @@ architecture Behavioral of Control_Unit is
     COMPONENT ALU
 	PORT( A,B: in STD_LOGIC_VECTOR (15 downto 0);
 			S : in STD_LOGIC_VECTOR (3 downto 0);
+			enable : in STD_LOGIC;
 			Cout : out STD_LOGIC;
 			Output : out STD_LOGIC_VECTOR (15 downto 0)
 		);
@@ -40,19 +41,18 @@ architecture Behavioral of Control_Unit is
     );
     END COMPONENT;
 
-    signal IR, TR, DR, AC: STD_LOGIC_VECTOR(15 downto 0);
+    signal IR, DR, AC: STD_LOGIC_VECTOR(15 downto 0);
     signal AR, PC: STD_LOGIC_VECTOR(11 downto 0);
     signal E: STD_LOGIC;
 
-    signal data_ram: std_logic_vector( data_width - 1 downto 0);
-    signal addr_ram: std_logic_vector( addr_width - 1 downto 0);
-    signal clk_ram, we_ram: std_logic;
+    signal we_ram: std_logic;
 
     signal data_rom: std_logic_vector( data_width - 1 downto 0);
     signal addr_rom: std_logic_vector( addr_width - 1 downto 0);
     signal clk_rom: std_logic;
 
     signal alu_op: std_logic_vector(3 downto 0);
+    signal alu_en: std_logic;
 
     TYPE State_type IS (fetch, decode, read_mem, execute);
     signal current_state: State_Type := fetch;
@@ -64,15 +64,21 @@ begin
     DR <= data_ram;
 
     COMP_ALU: ALU PORT MAP(
-        A => AC, B => DR, output => AC, Cout => E, S => alu_op
+        A => AC, B => DR, output => AC, Cout => E, S => alu_op, enable => alu_en
     );
     COMP_RAM: RAM PORT MAP(
         clk_in => clk,
         we => we_ram,
-        addr_in => addr_ram,
-        addr_out => addr_ram,
-        data_in => data_ram,
-        data_out => data_ram
+        addr_in => AR,
+        addr_out => AR,
+        data_in => DR,
+        data_out => DR
+    );
+
+    COMP_ROM: ROM PORT MAP(
+        clk => clk,
+        addr => PC,
+        data => IR
     );
 
     clockprocess : process(clk)
@@ -92,6 +98,9 @@ begin
             when fetch =>
                 decoder <= IR(15 downto 10);
                 AR(9 downto 0) <= IR(9 downto 0);
+                PC <= PC + 1;
+                alu_en <= '0';
+                we_ram <= '0';
                 next_state <= decode;
             when decode =>
                 case decoder is
@@ -103,31 +112,35 @@ begin
                         next_state <= fetch;
                 end case;
             when read_mem =>
-                addr_ram <= AR;
-                DR <= data_ram;
+                we_ram <= '0';
                 next_state <= execute;
             when execute =>
                 case decoder is
                     when "000001" =>
                         alu_op <= "1010"; 
+                        alu_en <= '1';
                     when "000010" =>
-                        data_ram <= AC;
+                        DR <= AC;
                         we_ram <= '1';
                     when "000011" =>
-                        AC <= data_ram;
+                        AC <= DR;
                         we_ram <= '0';
                     when "000100" =>
                         alu_op <= "0001";
+                        alu_en <= '1';
                     when "000101" =>
                         alu_op <= "0011";
+                        alu_en <= '1';
                     when "000110" =>
                         AC <= "0000000000000000";
                     when "000111" =>
                         E <= '0';
                     when "001000" =>
                         alu_op <= "0110";
+                        alu_en <= '1';
                     when "001001" =>
                         alu_op <= "0111";
+                        alu_en <= '1';
                     when "001010" =>
                         if AC(15) = '0' then
                             PC <= PC + 1;
@@ -146,8 +159,10 @@ begin
                         end if;
                     when "001110" =>
                         alu_op <= "0100";
+                        alu_en <= '1';
                     when "001111" =>
                         alu_op <= "0101";
+                        alu_en <= '1';
                     --when "010000" =>
                         -- fuck you ...
                     --when "100000" =>

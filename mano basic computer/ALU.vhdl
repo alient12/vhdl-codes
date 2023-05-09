@@ -6,6 +6,7 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity ALU is
 	Port ( A,B: in STD_LOGIC_VECTOR (15 downto 0);
 			S : in STD_LOGIC_VECTOR (3 downto 0);
+			enable : in STD_LOGIC;
 			Cout : out STD_LOGIC;
 			Output : out STD_LOGIC_VECTOR (15 downto 0)
 			);
@@ -42,6 +43,7 @@ architecture Behavioral of ALU is
 	END COMPONENT;
 	
 	signal I0,I1 : STD_LOGIC_VECTOR (15 downto 0);
+	signal temp_out : STD_LOGIC_VECTOR (15 downto 0);
 begin
 
 	Inst_arithic: arithic PORT MAP(
@@ -63,8 +65,15 @@ begin
 		A => I0,
 		B => I1,
 		S => S(3),
-		Output => Output
+		Output => temp_out
 	);
+
+	enable: process (enable)
+	begin
+	if enable = '1' then
+		output <= temp_out;
+	end if;
+	end process;
 
 
 end Behavioral;
