@@ -4,4 +4,7 @@ ghdl -a --ieee=synopsys .\arithic.vhdl || ghdl -e --ieee=synopsys arithic
 ghdl -a --ieee=synopsys .\logic.vhdl || ghdl -e --ieee=synopsys logic
 ghdl -a --ieee=synopsys .\MUX.vhdl || ghdl -e --ieee=synopsys MUX
 ghdl -a --ieee=synopsys .\ALU.vhdl || ghdl -e --ieee=synopsys ALU
+ghdl -a --ieee=synopsys .\register16.vhdl || ghdl -e --ieee=synopsys register16
+ghdl -a --ieee=synopsys .\register10.vhdl || ghdl -e --ieee=synopsys register10
+ghdl -a --ieee=synopsys .\count8.vhdl || ghdl -e --ieee=synopsys count8
 ghdl -a --ieee=synopsys -fexplicit .\Control_Unit.vhdl || ghdl -e --ieee=synopsys Control_Unit
