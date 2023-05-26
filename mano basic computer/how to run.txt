@@ -7,4 +7,15 @@ ghdl -a --ieee=synopsys .\ALU.vhdl || ghdl -e --ieee=synopsys ALU
 ghdl -a --ieee=synopsys .\register16.vhdl || ghdl -e --ieee=synopsys register16
 ghdl -a --ieee=synopsys .\register10.vhdl || ghdl -e --ieee=synopsys register10
 ghdl -a --ieee=synopsys .\count8.vhdl || ghdl -e --ieee=synopsys count8
+ghdl -a --ieee=synopsys .\flipflop.vhdl || ghdl -e --ieee=synopsys flipflops
 ghdl -a --ieee=synopsys -fexplicit .\Control_Unit.vhdl || ghdl -e --ieee=synopsys Control_Unit
+
+
+ghdl -a --ieee=synopsys .\HA.vhd || ghdl -e --ieee=synopsys HA
+ghdl -a --ieee=synopsys .\FA.vhd || ghdl -e --ieee=synopsys FA
+ghdl -a --ieee=synopsys .\CAS.vhd || ghdl -e --ieee=synopsys CAS
+ghdl -a --ieee=synopsys .\BlockX.vhd || ghdl -e --ieee=synopsys BlockX
+ghdl -a --ieee=synopsys .\BlockY.vhd || ghdl -e --ieee=synopsys BlockY
+ghdl -a --ieee=synopsys .\adder.vhd || ghdl -e --ieee=synopsys adder
+ghdl -a --ieee=synopsys .\sqrt.vhdl || ghdl -e --ieee=synopsys sqrt
+ghdl -a --ieee=synopsys .\multiplier.vhdl || ghdl -e --ieee=synopsys multiplier

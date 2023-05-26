@@ -67,6 +67,20 @@ architecture Behavioral of Control_Unit is
 	);
 	END COMPONENT;
 
+    COMPONENT sqrt
+	port(
+		A : in  STD_LOGIC_VECTOR (15 downto 0);
+        q : out  STD_LOGIC_VECTOR (7 downto 0)
+	);
+	END COMPONENT;
+
+    COMPONENT multiplier
+	port(
+		a,b : in  STD_LOGIC_VECTOR (5 downto 0);
+        p : out  STD_LOGIC_VECTOR (11 downto 0)
+	);
+	END COMPONENT;
+
     signal AC_LOAD, DR_LOAD, IR_LOAD, AR_LOAD, PC_LOAD, AC_INC, PC_INC, AC_RST: std_logic;
     signal AC_DATA, DR_DATA, IR_DATA: std_logic_vector(15 downto 0);
     signal AC, DR, IR: std_logic_vector(15 downto 0);
@@ -86,6 +100,8 @@ architecture Behavioral of Control_Unit is
     signal alu_op: std_logic_vector(3 downto 0);
     signal alu_out: std_logic_vector(15 downto 0);
     signal alu_en: std_logic;
+
+    signal sqrt_out, multiplier_out: std_logic_vector(15 downto 0);
 
     TYPE State_type IS (fetch, decode, read_mem, execute);
     signal current_state: State_Type := fetch;
@@ -164,6 +180,17 @@ begin
         DOUT => SC_T
     );
 
+    COMP_SQRT: sqrt PORT MAP(
+        A => DR,
+        q => sqrt_out(7 downto 0)
+    );
+
+    COMP_MULTIPLIER: multiplier PORT MAP(
+        a => AC(5 downto 0),
+        b => DR(5 downto 0),
+        p => multiplier_out(11 downto 0)
+    );
+
     AR_LOAD <= '0';
     PC_LOAD <= '0';
     AC_LOAD <= '0';
@@ -171,6 +198,8 @@ begin
     IR_LOAD <= '0';
     AR_DATA <= IR(9 downto 0);
     decoder <= IR(15 downto 10);
+    sqrt_out(15 downto 8) <= "00000000";
+    multiplier_out(15 downto 12) <= "0000";
 
     clockprocess : process(clk)
     begin 
@@ -345,10 +374,22 @@ begin
                         if falling_edge(SC_T(2)) then
                             AC_LOAD <= '0';
                         end if;
-                    --when "010000" =>
-                        -- fuck you ...
-                    --when "100000" =>
-                        -- fuck you ...
+                    when "010000" => -- Multiply
+                        AC_DATA <= multiplier_out;
+                        if rising_edge(SC_T(3)) then
+                            AC_LOAD <= '1';
+                        end if;
+                        if falling_edge(SC_T(3)) then
+                            AC_LOAD <= '0';
+                        end if;
+                    when "100000" => -- SQUIRT
+                        AC_DATA <= sqrt_out;
+                        if rising_edge(SC_T(3)) then
+                            AC_LOAD <= '1';
+                        end if;
+                        if falling_edge(SC_T(3)) then
+                            AC_LOAD <= '0';
+                        end if;
                     when others =>
                         null;
                 end case;
