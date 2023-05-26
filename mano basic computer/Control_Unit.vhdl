@@ -93,13 +93,8 @@ architecture Behavioral of Control_Unit is
 
     signal we_ram: std_logic;
 
-    signal data_rom: std_logic_vector( data_width - 1 downto 0);
-    signal addr_rom: std_logic_vector( addr_width - 1 downto 0);
-    signal clk_rom: std_logic;
-
     signal alu_op: std_logic_vector(3 downto 0);
     signal alu_out: std_logic_vector(15 downto 0);
-    signal alu_en: std_logic;
 
     signal sqrt_out, multiplier_out: std_logic_vector(15 downto 0);
 
@@ -110,7 +105,7 @@ architecture Behavioral of Control_Unit is
 begin
 
     COMP_ALU: ALU PORT MAP(
-        A => AC, B => DR, output => alu_out, Cout => E_DATA, S => alu_op, enable => alu_en
+        A => AC, B => DR, output => alu_out, Cout => E_DATA, S => alu_op, enable => '1'
     );
 
     COMP_RAM: RAM PORT MAP(
@@ -219,16 +214,16 @@ begin
         CASE current_state IS
             when fetch =>
                 if rising_edge(SC_T(0)) then    
-                    AR_LOAD <= '1';
+                    IR_LOAD <= '1';
                 end if;
                 if rising_edge(SC_T(1)) then
+                    AR_LOAD <= '1';
                     PC_INC <= '1';
-                    alu_en <= '0';
-                    we_ram <= '0';
                 end if;
                 if falling_edge(SC_T(1)) then
                     PC_INC <= '0';
                     AR_LOAD <= '0';
+                    IR_LOAD <= '0';
                     current_state <= decode;
                 end if;
             when decode =>
@@ -252,7 +247,6 @@ begin
                 case decoder is
                     when "000001" => -- AND
                         alu_op <= "1010"; 
-                        alu_en <= '1';
                         AC_DATA <= alu_out;
                         if rising_edge(SC_T(3)) then
                             AC_LOAD <= '1';
@@ -277,7 +271,6 @@ begin
                         end if;
                     when "000100" => -- ADD
                         alu_op <= "0001";
-                        alu_en <= '1';
                         AC_DATA <= alu_out;
                         if rising_edge(SC_T(3)) then
                             AC_LOAD <= '1';
@@ -308,7 +301,6 @@ begin
                         end if;
                     when "001000" => -- Circular Left Shift
                         alu_op <= "0110";
-                        alu_en <= '1';
                         AC_DATA <= alu_out;
                         if rising_edge(SC_T(2)) then
                             AC_LOAD <= '1';
@@ -318,7 +310,6 @@ begin
                         end if;
                     when "001001" => -- Circular Right Shift
                         alu_op <= "0111";
-                        alu_en <= '1';
                         AC_DATA <= alu_out;
                         if rising_edge(SC_T(2)) then
                             AC_LOAD <= '1';
@@ -354,9 +345,8 @@ begin
                         if falling_edge(SC_T(2)) then
                             PC_INC <= '0';
                         end if;
-                    when "001110" => -- linear Left Shift
+                    when "001110" => -- Linear Left Shift
                         alu_op <= "0100";
-                        alu_en <= '1';
                         AC_DATA <= alu_out;
                         if rising_edge(SC_T(2)) then
                             AC_LOAD <= '1';
@@ -366,7 +356,6 @@ begin
                         end if;
                     when "001111" => -- Linear Right Shift
                         alu_op <= "0101";
-                        alu_en <= '1';
                         AC_DATA <= alu_out;
                         if rising_edge(SC_T(2)) then
                             AC_LOAD <= '1';

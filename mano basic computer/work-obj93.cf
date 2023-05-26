@@ -1,61 +1,61 @@
 v 3
-file . ".\adder.vhd" "20230316094416.000" "20230526173606.347":
-  entity adder at 2( 2) + 0 on 87;
-  architecture behavioral of adder at 11( 219) + 0 on 88;
-file . ".\sqrt.vhdl" "20230526135410.000" "20230526172542.770":
-  entity sqrt at 1( 0) + 0 on 83;
-  architecture behavioral of sqrt at 9( 181) + 0 on 84;
-file . ".\BlockX.vhd" "20230331154056.000" "20230526172541.837":
-  entity blockx at 1( 0) + 0 on 79;
-  architecture behavioral of blockx at 11( 271) + 0 on 80;
-file . ".\FA.vhd" "20230330142018.000" "20230526172541.767":
-  entity fa at 2( 2) + 0 on 75;
-  architecture behavioral of fa at 10( 156) + 0 on 76;
-file . ".\flipflop.vhdl" "20230526132352.000" "20230526165448.051":
-  entity flipflop at 1( 0) + 0 on 63;
-  architecture cct of flipflop at 13( 283) + 0 on 64;
-file . ".\count8.vhdl" "20230526113816.000" "20230526150818.319":
-  entity count8 at 1( 0) + 0 on 59;
-  architecture behavior of count8 at 15( 212) + 0 on 60;
-file . ".\register12.vhdl" "20230526102536.000" "20230526135541.680":
-  entity register12 at 1( 0) + 0 on 57;
-  architecture cct of register12 at 13( 334) + 0 on 58;
-file . ".\ROM.vhdl" "20230427080702.000" "20230427123733.483":
-  entity rom at 1( 0) + 0 on 27;
-  architecture rom_arch of rom at 15( 349) + 0 on 28;
-file . ".\ALU.vhdl" "20230508220338.000" "20230509023546.597":
-  entity alu at 1( 0) + 0 on 37;
-  architecture behavioral of alu at 14( 282) + 0 on 38;
-file . ".\MUX.vhdl" "20230508220352.000" "20230509023542.166":
-  entity mux at 1( 0) + 0 on 35;
-  architecture behavioral of mux at 13( 239) + 0 on 36;
-file . ".\arithic.vhdl" "20230508220532.000" "20230509023532.776":
-  entity arithic at 1( 0) + 0 on 31;
-  architecture behavioral of arithic at 15( 319) + 0 on 32;
-file . ".\logic.vhdl" "20230508220408.000" "20230509023538.003":
-  entity logic at 1( 0) + 0 on 33;
-  architecture behavioral of logic at 12( 226) + 0 on 34;
-file . ".\RAM.vhdl" "20230425223418.000" "20230426030454.438":
-  entity ram at 1( 0) + 0 on 21;
-  architecture ram_arch of ram at 19( 521) + 0 on 22;
-file . ".\Control_Unit.vhdl" "20230526141130.000" "20230526174131.935":
-  entity control_unit at 1( 0) + 0 on 91;
-  architecture behavioral of control_unit at 15( 298) + 0 on 92;
-file . ".\register16.vhdl" "20230526102452.000" "20230526135455.341":
-  entity register16 at 1( 0) + 0 on 53;
-  architecture cct of register16 at 13( 289) + 0 on 54;
-file . ".\register10.vhdl" "20230526125116.000" "20230526162129.173":
-  entity register10 at 1( 0) + 0 on 61;
-  architecture cct of register10 at 13( 332) + 0 on 62;
-file . ".\HA.vhd" "20230330141910.000" "20230526172541.719":
-  entity ha at 1( 0) + 0 on 73;
-  architecture behavioral of ha at 9( 142) + 0 on 74;
-file . ".\CAS.vhd" "20230330175848.000" "20230526172541.807":
-  entity cas at 1( 0) + 0 on 77;
-  architecture behavioral of cas at 10( 157) + 0 on 78;
-file . ".\BlockY.vhd" "20230331153620.000" "20230526172541.873":
-  entity blocky at 2( 2) + 0 on 81;
-  architecture behavioral of blocky at 10( 218) + 0 on 82;
 file . ".\multiplier.vhdl" "20230316094712.000" "20230526173611.030":
   entity simple at 2( 2) + 0 on 89;
   architecture behavioral of simple at 10( 189) + 0 on 90;
+file . ".\BlockY.vhd" "20230331153620.000" "20230526172541.873":
+  entity blocky at 2( 2) + 0 on 81;
+  architecture behavioral of blocky at 10( 218) + 0 on 82;
+file . ".\CAS.vhd" "20230330175848.000" "20230526172541.807":
+  entity cas at 1( 0) + 0 on 77;
+  architecture behavioral of cas at 10( 157) + 0 on 78;
+file . ".\HA.vhd" "20230330141910.000" "20230526172541.719":
+  entity ha at 1( 0) + 0 on 73;
+  architecture behavioral of ha at 9( 142) + 0 on 74;
+file . ".\register10.vhdl" "20230526125116.000" "20230526162129.173":
+  entity register10 at 1( 0) + 0 on 61;
+  architecture cct of register10 at 13( 332) + 0 on 62;
+file . ".\register16.vhdl" "20230526102452.000" "20230526135455.341":
+  entity register16 at 1( 0) + 0 on 53;
+  architecture cct of register16 at 13( 289) + 0 on 54;
+file . ".\Control_Unit.vhdl" "20230526144642.000" "20230526183922.526":
+  entity control_unit at 1( 0) + 0 on 101;
+  architecture behavioral of control_unit at 15( 298) + 0 on 102;
+file . ".\RAM.vhdl" "20230526150856.000" "20230526183915.465":
+  entity ram at 1( 0) + 0 on 97;
+  architecture ram_arch of ram at 19( 521) + 0 on 98;
+file . ".\logic.vhdl" "20230508220408.000" "20230509023538.003":
+  entity logic at 1( 0) + 0 on 33;
+  architecture behavioral of logic at 12( 226) + 0 on 34;
+file . ".\arithic.vhdl" "20230508220532.000" "20230509023532.776":
+  entity arithic at 1( 0) + 0 on 31;
+  architecture behavioral of arithic at 15( 319) + 0 on 32;
+file . ".\MUX.vhdl" "20230508220352.000" "20230509023542.166":
+  entity mux at 1( 0) + 0 on 35;
+  architecture behavioral of mux at 13( 239) + 0 on 36;
+file . ".\ALU.vhdl" "20230508220338.000" "20230509023546.597":
+  entity alu at 1( 0) + 0 on 37;
+  architecture behavioral of alu at 14( 282) + 0 on 38;
+file . ".\ROM.vhdl" "20230526150558.000" "20230526183916.242":
+  entity rom at 1( 0) + 0 on 99;
+  architecture rom_arch of rom at 15( 349) + 0 on 100;
+file . ".\register12.vhdl" "20230526102536.000" "20230526135541.680":
+  entity register12 at 1( 0) + 0 on 57;
+  architecture cct of register12 at 13( 334) + 0 on 58;
+file . ".\count8.vhdl" "20230526113816.000" "20230526150818.319":
+  entity count8 at 1( 0) + 0 on 59;
+  architecture behavior of count8 at 15( 212) + 0 on 60;
+file . ".\flipflop.vhdl" "20230526132352.000" "20230526165448.051":
+  entity flipflop at 1( 0) + 0 on 63;
+  architecture cct of flipflop at 13( 283) + 0 on 64;
+file . ".\FA.vhd" "20230330142018.000" "20230526172541.767":
+  entity fa at 2( 2) + 0 on 75;
+  architecture behavioral of fa at 10( 156) + 0 on 76;
+file . ".\BlockX.vhd" "20230331154056.000" "20230526172541.837":
+  entity blockx at 1( 0) + 0 on 79;
+  architecture behavioral of blockx at 11( 271) + 0 on 80;
+file . ".\sqrt.vhdl" "20230526135410.000" "20230526172542.770":
+  entity sqrt at 1( 0) + 0 on 83;
+  architecture behavioral of sqrt at 9( 181) + 0 on 84;
+file . ".\adder.vhd" "20230316094416.000" "20230526173606.347":
+  entity adder at 2( 2) + 0 on 87;
+  architecture behavioral of adder at 11( 219) + 0 on 88;
