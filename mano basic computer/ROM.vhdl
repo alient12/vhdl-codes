@@ -16,8 +16,8 @@ architecture ROM_arch of ROM is
 
 type mem_type is array (conv_integer(2** addr_width) downto 0) of std_logic_vector( data_width - 1 downto 0) ;
 signal mem : mem_type := (
-        0 => "0000110001000101",  -- Load MEM(69)
-        1 => "0000010001010101",  -- Add MEM(85)
+        0 => "0000110001000100",  -- Load MEM(68)
+        1 => "0000010001010100",  -- Add MEM(84)
         2 => "0000100000001100",  -- Store MEM(12)
         3 => "0001010000000000",  -- Increment AC
         4 => "0010010000000000",  -- Circular Right Shift

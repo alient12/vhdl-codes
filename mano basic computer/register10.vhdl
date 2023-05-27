@@ -17,7 +17,7 @@ signal q_sig: std_logic_vector(9 downto 0);
 begin
     process(rst, clk, ld)
     begin
-        if (rst = '0') then --asynch reset
+        if (rst = '1') then --asynch reset
             q <= (others=>'0');
             q_sig <= (others=>'0');
         end if;
@@ -26,7 +26,8 @@ begin
                 q <= d;
                 q_sig <= d;
             elsif inc = '1' then
-                q <= q_sig + 1;
+                q_sig <= q_sig + 1;
+                q <= q_sig;
             end if;
         end if;
     end process;

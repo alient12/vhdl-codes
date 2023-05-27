@@ -19,8 +19,8 @@ architecture RAM_arch of RAM is
 
 type mem_type is array (conv_integer(2** addr_width) downto 0) of std_logic_vector( data_width - 1 downto 0) ;
 signal mem : mem_type:= (
-        69 => "0000000001000101",
-        85 => "0000000001010101",
+        68 => "0000000001000101",
+        84 => "0000000001010101",
         others => (others => '0')
     );
 

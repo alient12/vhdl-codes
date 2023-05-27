@@ -376,7 +376,7 @@ begin
                         if falling_edge(SC_T(3)) then
                             AC_LOAD <= '0';
                         end if;
-                    when "100000" => -- SQUIRT
+                    when "100000" => -- SQRT
                         AC_DATA <= sqrt_out;
                         if rising_edge(SC_T(3)) then
                             AC_LOAD <= '1';
