@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat May 27 18:26:45 2023
+# Process ID: 23080
+# Current directory: C:/Users/Asus/arch_project/arch_project.runs/synth_1
+# Command line: vivado.exe -log simple.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source simple.tcl
+# Log file: C:/Users/Asus/arch_project/arch_project.runs/synth_1/simple.vds
+# Journal file: C:/Users/Asus/arch_project/arch_project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source simple.tcl -notrace

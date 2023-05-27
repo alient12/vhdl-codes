@@ -30,7 +30,7 @@ begin
 	begin
 	CASE S1 is
 		when "000"=>
-			arthc <= x * y;
+			arthc <= x + y;
 		when "001"=>
 			temp <= '0' & x + y;
 			arthc<= temp(15 downto 0);

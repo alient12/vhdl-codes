@@ -17,7 +17,6 @@ architecture Behavioral of Control_Unit is
     COMPONENT ALU
 	PORT( A,B: in STD_LOGIC_VECTOR (15 downto 0);
 			S : in STD_LOGIC_VECTOR (3 downto 0);
-			enable : in STD_LOGIC;
 			Cout : out STD_LOGIC;
 			Output : out STD_LOGIC_VECTOR (15 downto 0)
 		);
@@ -25,7 +24,6 @@ architecture Behavioral of Control_Unit is
 
     COMPONENT RAM
 	PORT(   clk_in : in std_logic;
-            clk_out : in std_logic;
             we : in std_logic;
             addr_in : in std_logic_vector( addr_width - 1 downto 0);
             addr_out : in std_logic_vector( addr_width - 1 downto 0);
@@ -105,7 +103,7 @@ architecture Behavioral of Control_Unit is
 begin
 
     COMP_ALU: ALU PORT MAP(
-        A => AC, B => DR, output => alu_out, Cout => E_DATA, S => alu_op, enable => '1'
+        A => AC, B => DR, output => alu_out, Cout => E_DATA, S => alu_op
     );
 
     COMP_RAM: RAM PORT MAP(
@@ -136,14 +134,18 @@ begin
         clk => clk,
         d => DR_DATA,
         q => DR,
-        ld => DR_LOAD
+        ld => DR_LOAD,
+        rst => '0',
+        inc => '0'
     );
 
     COMP_IR: register16 PORT MAP(
         clk => clk,
         d => IR_DATA,
         q => IR,
-        ld => IR_LOAD
+        ld => IR_LOAD,
+        rst => '0',
+        inc => '0'
     );
 
     COMP_PC: register10 PORT MAP(
@@ -151,14 +153,17 @@ begin
         d => PC_DATA,
         q => PC,
         ld => PC_LOAD,
-        inc => PC_INC
+        inc => PC_INC,
+        rst => '0'
     );
 
     COMP_AR: register10 PORT MAP(
         clk => clk,
         d => AR_DATA,
         q => AR,
-        ld => AR_LOAD
+        ld => AR_LOAD,
+        rst => '0',
+        inc => '0'
     );
 
     COMP_E: flipflop PORT MAP(
@@ -209,7 +214,7 @@ begin
         end if;
     end process;
 
-    state_logic: process (current_state, clk, SC_T)
+    state_logic: process (current_state, clk, SC_T, decoder)
     begin
         CASE current_state IS
             when fetch =>

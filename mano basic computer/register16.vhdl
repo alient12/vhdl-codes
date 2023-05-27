@@ -15,16 +15,19 @@ architecture cct of register16 is
 signal q_sig: std_logic_vector(15 downto 0);
 
 begin
-    process(rst, clk)
+    process(rst, clk, ld)
     begin
         if (rst = '0') then --asynch reset
             q <= (others=>'0');
             q_sig <= (others=>'0');
-        elsif (clk'event and clk = '1' and ld = '1') then
-            q <= d;
-            q_sig <= d;
-        elsif (clk'event and clk = '1' and inc = '1') then
-            q <= q_sig + 1;
+        end if;
+        if (clk'event and clk = '1') then
+            if ld = '1' then
+                q <= d;
+                q_sig <= d;
+            elsif inc = '1' then
+                q <= q_sig + 1;
+            end if;
         end if;
     end process;
 end cct;

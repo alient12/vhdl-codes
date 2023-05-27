@@ -7,7 +7,6 @@ entity RAM is
 generic (data_width : natural := 16;
 addr_width : natural := 10);
 port ( clk_in : in std_logic;
-clk_out : in std_logic;
 we : in std_logic;
 addr_in : in std_logic_vector( addr_width - 1 downto 0);
 addr_out : in std_logic_vector( addr_width - 1 downto 0);
@@ -36,9 +35,9 @@ mem_write : process (clk_in)
     end if ;
 end process mem_write ;
 
-mem_read : process (clk_out)
+mem_read : process (clk_in)
     begin
-    if clk_out'event and clk_out = '1' then
+    if clk_in'event and clk_in = '1' then
         data_out <= mem( conv_integer( addr_out)) ;
     end if ;
 end process mem_read;

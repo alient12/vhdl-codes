@@ -1,0 +1,247 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat May 27 18:26:45 2023
+# Process ID: 23080
+# Current directory: C:/Users/Asus/arch_project/arch_project.runs/synth_1
+# Command line: vivado.exe -log simple.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source simple.tcl
+# Log file: C:/Users/Asus/arch_project/arch_project.runs/synth_1/simple.vds
+# Journal file: C:/Users/Asus/arch_project/arch_project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source simple.tcl -notrace
+Command: synth_design -top simple -part xc7s100fgga676-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s100'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s100'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 23652 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 563.723 ; gain = 185.398
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'simple' [C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/multiplier.vhdl:10]
+INFO: [Synth 8-3491] module 'adder' declared at 'C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/adder.vhd:5' bound to instance 'adder1' of component 'adder' [C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/multiplier.vhdl:42]
+INFO: [Synth 8-638] synthesizing module 'adder' [C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/adder.vhd:11]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/FA.vhd:5' bound to instance 'fa1' of component 'FA' [C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/adder.vhd:23]
+INFO: [Synth 8-638] synthesizing module 'FA' [C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/FA.vhd:10]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/HA.vhd:4' bound to instance 'half_adder1' of component 'HA' [C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/FA.vhd:23]
+INFO: [Synth 8-638] synthesizing module 'HA' [C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/HA.vhd:9]
+INFO: [Synth 8-256] done synthesizing module 'HA' (1#1) [C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/HA.vhd:9]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/HA.vhd:4' bound to instance 'half_adder2' of component 'HA' [C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/FA.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'FA' (2#1) [C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/FA.vhd:10]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/FA.vhd:5' bound to instance 'fa2' of component 'FA' [C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/adder.vhd:24]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/FA.vhd:5' bound to instance 'fa3' of component 'FA' [C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/adder.vhd:25]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/FA.vhd:5' bound to instance 'fa4' of component 'FA' [C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/adder.vhd:26]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/FA.vhd:5' bound to instance 'fa5' of component 'FA' [C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/adder.vhd:27]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/FA.vhd:5' bound to instance 'fa6' of component 'FA' [C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/adder.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'adder' (3#1) [C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/adder.vhd:11]
+INFO: [Synth 8-3491] module 'adder' declared at 'C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/adder.vhd:5' bound to instance 'adder2' of component 'adder' [C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/multiplier.vhdl:55]
+INFO: [Synth 8-3491] module 'adder' declared at 'C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/adder.vhd:5' bound to instance 'adder3' of component 'adder' [C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/multiplier.vhdl:68]
+INFO: [Synth 8-3491] module 'adder' declared at 'C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/adder.vhd:5' bound to instance 'adder4' of component 'adder' [C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/multiplier.vhdl:81]
+INFO: [Synth 8-3491] module 'adder' declared at 'C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/adder.vhd:5' bound to instance 'adder5' of component 'adder' [C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/multiplier.vhdl:94]
+INFO: [Synth 8-256] done synthesizing module 'simple' (4#1) [C:/Users/Asus/OneDrive/Desktop/codes/vhdl-codes/mano basic computer/multiplier.vhdl:10]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 627.355 ; gain = 249.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 627.355 ; gain = 249.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s100fgga676-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 627.355 ; gain = 249.031
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7s100fgga676-2
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 627.355 ; gain = 249.031
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 60    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module HA 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 160 (col length:80)
+BRAMs: 240 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 770.441 ; gain = 392.117
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 776.188 ; gain = 397.863
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 776.188 ; gain = 397.863
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 776.188 ; gain = 397.863
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 776.188 ; gain = 397.863
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 776.188 ; gain = 397.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 776.188 ; gain = 397.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 776.188 ; gain = 397.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 776.188 ; gain = 397.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT2 |    16|
+|2     |LUT3 |     1|
+|3     |LUT4 |    11|
+|4     |LUT5 |     4|
+|5     |LUT6 |    43|
+|6     |IBUF |    12|
+|7     |OBUF |    12|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    99|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 776.188 ; gain = 397.863
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 776.188 ; gain = 397.863
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 776.188 ; gain = 397.863
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 886.055 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+28 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 886.055 ; gain = 531.613
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 886.055 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Asus/arch_project/arch_project.runs/synth_1/simple.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file simple_utilization_synth.rpt -pb simple_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat May 27 18:27:01 2023...

@@ -14,7 +14,7 @@ architecture cct of flipflop is
 
 
 begin
-    process(rst, clk)
+    process(rst, clk, ld)
     begin
         if (rst = '0') then --asynch reset
             q <= '0';
